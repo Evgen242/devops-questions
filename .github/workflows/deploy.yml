@@ -5,8 +5,9 @@ on:
   push:
     branches: [ main ]
     paths:
-      - 'topics/**/*.json'
+      - 'app_template.py'
       - 'generate_app.py'
+      - 'topics/**/*.json'
 
 jobs:
   deploy:
@@ -43,5 +44,5 @@ jobs:
             cd /home/deploy/devops-test-app
             pkill -f "python3 app.py" || true
             nohup python3 app.py > app.log 2>&1 &
-            sleep 2
+            sleep 3
             curl -I http://localhost:8080/test
