@@ -19,6 +19,7 @@ app.secret_key = 'devops-secret-key-2026'
 # ============================================
 
 questions = [
+    {"id": 1, "topic": "Linux", "question": "Как посмотреть логи systemd-сервиса в реальном времени?", "options": ["systemctl logs -f", "journalctl -u <service> -f", "tail -f /var/log/syslog", "dmesg -w"], "correct": "journalctl -u <service> -f"},
     {"id": 2, "topic": "Linux", "question": "Как ограничить CPU для systemd-сервиса?", "options": ["CPULimit=80", "CPUQuota=80%", "LimitCPU=80", "CPU=80%"], "correct": "CPUQuota=80%"},
     {"id": 3, "topic": "Linux", "question": "Как перезагрузить конфигурацию systemd после изменения файла?", "options": ["systemctl restart", "systemctl reload", "systemctl daemon-reload", "systemctl update"], "correct": "systemctl daemon-reload"},
     {"id": 4, "topic": "Linux", "question": "Как посмотреть список всех активных сервисов systemd?", "options": ["systemctl list", "systemctl status", "systemctl list-units --type=service", "systemctl show"], "correct": "systemctl list-units --type=service"},
