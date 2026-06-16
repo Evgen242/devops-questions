@@ -44,5 +44,5 @@ jobs:
             cd /home/deploy/devops-test-app
             pkill -f "python3 app.py" || true
             nohup python3 app.py > app.log 2>&1 &
-            sleep 3
+            sleep 5
             curl -I http://localhost:8080/test
