@@ -1,0 +1,46 @@
+name: Deploy Questions to Trainer
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'topics/**/*.json'
+      - 'generate_app.py'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Generate app.py
+        run: python generate_app.py
+      
+      - name: Copy app.py to VPS
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          source: "app.py"
+          target: "/home/deploy/devops-test-app/"
+      
+      - name: Restart trainer
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          script: |
+            cd /home/deploy/devops-test-app
+            pkill -f "python3 app.py" || true
+            nohup python3 app.py > app.log 2>&1 &
+            sleep 2
+            curl -I http://localhost:8080/test
