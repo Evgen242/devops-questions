@@ -15,11 +15,10 @@ app = Flask(__name__)
 app.secret_key = 'devops-secret-key-2026'
 
 # ============================================
-# БАЗА ВОПРОСОВ (278)
+# БАЗА ВОПРОСОВ (248)
 # ============================================
 
 questions = [
-    # ========== Linux (23 вопроса) ==========
     {"id": 1, "topic": "Linux", "question": "Как посмотреть логи systemd-сервиса в реальном времени?", "options": ["systemctl logs -f", "journalctl -u <service> -f", "tail -f /var/log/syslog", "dmesg -w"], "correct": "journalctl -u <service> -f"},
     {"id": 2, "topic": "Linux", "question": "Как ограничить CPU для systemd-сервиса?", "options": ["CPULimit=80", "CPUQuota=80%", "LimitCPU=80", "CPU=80%"], "correct": "CPUQuota=80%"},
     {"id": 3, "topic": "Linux", "question": "Как перезагрузить конфигурацию systemd после изменения файла?", "options": ["systemctl restart", "systemctl reload", "systemctl daemon-reload", "systemctl update"], "correct": "systemctl daemon-reload"},
@@ -43,8 +42,6 @@ questions = [
     {"id": 21, "topic": "Linux", "question": "Что делает команда 'ps aux'?", "options": ["Показывает все процессы", "Удаляет процессы", "Создает процессы", "Останавливает процессы"], "correct": "Показывает все процессы"},
     {"id": 22, "topic": "Linux", "question": "Как посмотреть версию ядра Linux?", "options": ["uname -r", "kernel --version", "version", "cat /proc/version"], "correct": "uname -r"},
     {"id": 23, "topic": "Linux", "question": "Как посмотреть загрузку памяти?", "options": ["free -h", "top", "htop", "Все варианты"], "correct": "Все варианты"},
-    
-    # ========== Сети (17 вопросов) ==========
     {"id": 24, "topic": "Networks", "question": "Чем отличается TCP от UDP?", "options": ["TCP быстрее, UDP надёжнее", "TCP надежный с подтверждением, UDP быстрый без подтверждения", "TCP для веб-сайтов, UDP для файлов", "Одинаковые"], "correct": "TCP надежный с подтверждением, UDP быстрый без подтверждения"},
     {"id": 25, "topic": "Networks", "question": "Что такое reverse proxy?", "options": ["Сервер для кеширования", "Сервер, перенаправляющий запросы на внутренние сервера", "Балансировщик нагрузки", "Файрвол"], "correct": "Сервер, перенаправляющий запросы на внутренние сервера"},
     {"id": 26, "topic": "Networks", "question": "Какой порт у HTTPS?", "options": ["80", "443", "22", "8080"], "correct": "443"},
@@ -62,8 +59,6 @@ questions = [
     {"id": 38, "topic": "Networks", "question": "Что такое HTTP/2?", "options": ["Новая версия HTTP с мультиплексированием", "Система кеширования", "Протокол шифрования", "Тип сервера"], "correct": "Новая версия HTTP с мультиплексированием"},
     {"id": 39, "topic": "Networks", "question": "Что такое 'subnet' (подсеть)?", "options": ["Логическое разделение IP-сети", "Тип маршрутизатора", "Сетевой протокол", "Система шифрования"], "correct": "Логическое разделение IP-сети"},
     {"id": 40, "topic": "Networks", "question": "Что такое 'TLS handshake'?", "options": ["Обмен ключами для шифрования", "Тип соединения", "Сетевой протокол", "Аутентификация"], "correct": "Обмен ключами для шифрования"},
-    
-    # ========== CI/CD (22 вопроса) ==========
     {"id": 41, "topic": "CI/CD", "question": "Что делает GitHub Actions?", "options": ["Хостит код", "Запускает авто-тесты и деплой при push/PR", "Управляет пользователями", "Отслеживает баги"], "correct": "Запускает авто-тесты и деплой при push/PR"},
     {"id": 42, "topic": "CI/CD", "question": "Как настроить Webhook для авто-деплоя?", "options": ["GitHub → Webhook → HTTP-запрос на сервер", "Написать Dockerfile", "Настроить firewall", "Создать базу данных"], "correct": "GitHub → Webhook → HTTP-запрос на сервер"},
     {"id": 43, "topic": "CI/CD", "question": "Чем отличается Git от GitHub?", "options": ["Git — язык программирования", "Git — локальная система контроля версий, GitHub — облачный хостинг", "Git — база данных", "GitHub — IDE"], "correct": "Git — локальная система контроля версий, GitHub — облачный хостинг"},
@@ -86,8 +81,6 @@ questions = [
     {"id": 60, "topic": "CI/CD", "question": "Что такое pipeline?", "options": ["Последовательность шагов CI/CD", "База данных", "Тип сервера", "Язык программирования"], "correct": "Последовательность шагов CI/CD"},
     {"id": 61, "topic": "CI/CD", "question": "Что такое 'rollback' в CI/CD?", "options": ["Откат к предыдущей версии", "Новый деплой", "Запуск тестов", "Сборка проекта"], "correct": "Откат к предыдущей версии"},
     {"id": 62, "topic": "CI/CD", "question": "Что такое 'cache' в GitHub Actions?", "options": ["Кеширование зависимостей между запусками", "Хранение логов", "Тип экшена", "Система мониторинга"], "correct": "Кеширование зависимостей между запусками"},
-    
-    # ========== Docker (17 вопросов) ==========
     {"id": 63, "topic": "Docker", "question": "Что такое Docker?", "options": ["Виртуальная машина", "Система контейнеризации", "Язык программирования", "База данных"], "correct": "Система контейнеризации"},
     {"id": 64, "topic": "Docker", "question": "Чем отличается контейнер от виртуальной машины?", "options": ["Контейнер легче и использует ядро хоста", "Контейнер тяжелее", "Это одно и то же", "ВМ легче"], "correct": "Контейнер легче и использует ядро хоста"},
     {"id": 65, "topic": "Docker", "question": "Какая команда собирает Docker образ?", "options": ["docker build", "docker create", "docker run", "docker start"], "correct": "docker build"},
@@ -105,8 +98,6 @@ questions = [
     {"id": 77, "topic": "Docker", "question": "Что такое Docker Swarm?", "options": ["Инструмент оркестрации контейнеров", "База данных", "Веб-сервер", "Язык программирования"], "correct": "Инструмент оркестрации контейнеров"},
     {"id": 78, "topic": "Docker", "question": "Что такое 'multi-stage build' в Docker?", "options": ["Многоэтапная сборка для уменьшения образа", "Тип контейнера", "Сеть Docker", "Система мониторинга"], "correct": "Многоэтапная сборка для уменьшения образа"},
     {"id": 79, "topic": "Docker", "question": "Что делает 'docker push'?", "options": ["Отправляет образ в реестр", "Загружает образ", "Удаляет образ", "Создает контейнер"], "correct": "Отправляет образ в реестр"},
-    
-    # ========== Kubernetes (9 вопросов) ==========
     {"id": 80, "topic": "Kubernetes", "question": "Что такое Kubernetes?", "options": ["Оркестратор контейнеров", "База данных", "Язык программирования", "CI/CD система"], "correct": "Оркестратор контейнеров"},
     {"id": 81, "topic": "Kubernetes", "question": "Что такое Pod в Kubernetes?", "options": ["Группа контейнеров", "Физический сервер", "Сеть", "База данных"], "correct": "Группа контейнеров"},
     {"id": 82, "topic": "Kubernetes", "question": "Что делает kubectl?", "options": ["CLI для управления K8s", "Сервер баз данных", "Система мониторинга", "Веб-сервер"], "correct": "CLI для управления K8s"},
@@ -116,8 +107,6 @@ questions = [
     {"id": 86, "topic": "Kubernetes", "question": "Что такое ConfigMap?", "options": ["Хранит конфигурацию", "База данных", "Тип сети", "Система мониторинга"], "correct": "Хранит конфигурацию"},
     {"id": 87, "topic": "Kubernetes", "question": "Что такое 'kubelet'?", "options": ["Агент на узле, управляющий подам", "CLI для K8s", "База данных", "Система мониторинга"], "correct": "Агент на узле, управляющий подам"},
     {"id": 88, "topic": "Kubernetes", "question": "Что такое 'etcd'?", "options": ["Хранилище данных кластера K8s", "База данных", "Система логирования", "Тип пода"], "correct": "Хранилище данных кластера K8s"},
-    
-    # ========== Terraform (7 вопросов) ==========
     {"id": 89, "topic": "Terraform", "question": "Что такое Terraform?", "options": ["Инструмент IaC (Infrastructure as Code)", "CI/CD система", "База данных", "Веб-сервер"], "correct": "Инструмент IaC (Infrastructure as Code)"},
     {"id": 90, "topic": "Terraform", "question": "Что такое 'terraform plan'?", "options": ["Показывает изменения до применения", "Применяет изменения", "Удаляет инфраструктуру", "Создает план работ"], "correct": "Показывает изменения до применения"},
     {"id": 91, "topic": "Terraform", "question": "Что такое состояние (state) в Terraform?", "options": ["Файл с информацией о ресурсах", "Система мониторинга", "База данных", "Логи"], "correct": "Файл с информацией о ресурсах"},
@@ -125,8 +114,6 @@ questions = [
     {"id": 93, "topic": "Terraform", "question": "Что такое провайдер в Terraform?", "options": ["Плагин для взаимодействия с API (AWS, GCP, Azure)", "Тип ресурса", "Система мониторинга", "База данных"], "correct": "Плагин для взаимодействия с API (AWS, GCP, Azure)"},
     {"id": 94, "topic": "Terraform", "question": "Как импортировать существующий ресурс?", "options": ["terraform import <address> <id>", "terraform add", "terraform create", "terraform load"], "correct": "terraform import <address> <id>"},
     {"id": 95, "topic": "Terraform", "question": "Что делает 'terraform destroy'?", "options": ["Уничтожает всю инфраструктуру", "Сохраняет состояние", "Применяет изменения", "Показывает план"], "correct": "Уничтожает всю инфраструктуру"},
-    
-    # ========== Мониторинг (9 вопросов) ==========
     {"id": 96, "topic": "Monitoring", "question": "Что такое Prometheus?", "options": ["Система мониторинга и метрик", "База данных", "Веб-сервер", "CI/CD система"], "correct": "Система мониторинга и метрик"},
     {"id": 97, "topic": "Monitoring", "question": "Что такое Grafana?", "options": ["Инструмент визуализации дашбордов", "Система логирования", "База данных", "CI/CD система"], "correct": "Инструмент визуализации дашбордов"},
     {"id": 98, "topic": "Monitoring", "question": "Что такое экспортёр в Prometheus?", "options": ["Сборщик метрик со сторонних систем", "Дашборд", "База данных", "CI/CD система"], "correct": "Сборщик метрик со сторонних систем"},
@@ -136,15 +123,11 @@ questions = [
     {"id": 102, "topic": "Monitoring", "question": "Что такое трейсинг (tracing)?", "options": ["Отслеживание запросов в распределённых системах", "Система мониторинга", "База данных", "CI/CD система"], "correct": "Отслеживание запросов в распределённых системах"},
     {"id": 103, "topic": "Monitoring", "question": "Что такое 'metrics' в мониторинге?", "options": ["Числовые показатели состояния системы", "Логи", "Трейсы", "События"], "correct": "Числовые показатели состояния системы"},
     {"id": 104, "topic": "Monitoring", "question": "Что такое 'dashboard'?", "options": ["Панель визуализации метрик", "База данных", "Система алертов", "Сетевой протокол"], "correct": "Панель визуализации метрик"},
-    
-    # ========== Базы данных (5 вопросов) ==========
     {"id": 105, "topic": "Databases", "question": "Что такое SQL?", "options": ["Язык запросов к базам данных", "База данных", "Сервер БД", "CI/CD система"], "correct": "Язык запросов к базам данных"},
     {"id": 106, "topic": "Databases", "question": "Чем отличается PostgreSQL от MySQL?", "options": ["PostgreSQL — объектно-реляционная, MySQL — реляционная", "Они одинаковые", "PostgreSQL быстрее", "MySQL — ORM"], "correct": "PostgreSQL — объектно-реляционная, MySQL — реляционная"},
     {"id": 107, "topic": "Databases", "question": "Что такое JOIN?", "options": ["Объединение таблиц", "Создание индекса", "Удаление данных", "Создание БД"], "correct": "Объединение таблиц"},
     {"id": 108, "topic": "Databases", "question": "Как сделать резервное копирование PostgreSQL?", "options": ["pg_dump dbname > backup.sql", "psql dump", "backup postgres", "pg_backup"], "correct": "pg_dump dbname > backup.sql"},
     {"id": 109, "topic": "Databases", "question": "Что такое индекс в БД?", "options": ["Ускоряет поиск данных", "Тип данных", "Система логирования", "CI/CD система"], "correct": "Ускоряет поиск данных"},
-    
-    # ========== Безопасность (9 вопросов) ==========
     {"id": 110, "topic": "Security", "question": "Что такое Fail2ban?", "options": ["Блокирует IP после неудачных попыток входа", "Файрвол", "Система мониторинга", "Антивирус"], "correct": "Блокирует IP после неудачных попыток входа"},
     {"id": 111, "topic": "Security", "question": "Как запретить вход по паролю в SSH?", "options": ["PasswordAuthentication no", "PermitRootLogin no", "AllowUsers no", "DisablePassword yes"], "correct": "PasswordAuthentication no"},
     {"id": 112, "topic": "Security", "question": "Что такое SSL/TLS?", "options": ["Протокол шифрования", "Система мониторинга", "База данных", "CI/CD система"], "correct": "Протокол шифрования"},
@@ -154,8 +137,6 @@ questions = [
     {"id": 116, "topic": "Security", "question": "Что такое OWASP?", "options": ["Стандарт безопасности веб-приложений", "Антивирус", "База данных", "CI/CD система"], "correct": "Стандарт безопасности веб-приложений"},
     {"id": 117, "topic": "Security", "question": "Что такое 'HTTPS'?", "options": ["HTTP с шифрованием", "Сетевой протокол", "База данных", "Система мониторинга"], "correct": "HTTP с шифрованием"},
     {"id": 118, "topic": "Security", "question": "Что такое 'API key'?", "options": ["Ключ для аутентификации API", "Пароль", "Сертификат", "Токен"], "correct": "Ключ для аутентификации API"},
-    
-    # ========== Мои кейсы (42 вопроса) ==========
     {"id": 119, "topic": "My Cases", "question": "Как вы починили 502 Bad Gateway на Container Packer?", "options": ["Перезапустил Nginx", "Ограничил CPU через CPUQuota=80% в systemd", "Добавил больше памяти", "Обновил Python"], "correct": "Ограничил CPU через CPUQuota=80% в systemd"},
     {"id": 120, "topic": "My Cases", "question": "Почему перестал работать Webhook и как вы исправили?", "options": ["GitHub изменил API", "Порт 9000 заблокировал хостинг, перевел на HTTPS через Nginx", "Слетели права доступа", "Закончилось место"], "correct": "Порт 9000 заблокировал хостинг, перевел на HTTPS через Nginx"},
     {"id": 121, "topic": "My Cases", "question": "Какой уникальный опыт вы получили на линии 102?", "options": ["Работа с критически важной системой 24/7", "Настройка маршрутизаторов", "Программирование на C++", "Администрирование Windows"], "correct": "Работа с критически важной системой 24/7"},
@@ -172,7 +153,7 @@ questions = [
     {"id": 132, "topic": "My Cases", "question": "Какой домен у AI Post Generator?", "options": ["aigenerator.ddns.net", "aigenerator.myvnc.com", "ai.cuby.by", "generator.ai"], "correct": "aigenerator.myvnc.com"},
     {"id": 133, "topic": "My Cases", "question": "Что вы используете для мониторинга серверов?", "options": ["Prometheus", "Zabbix", "Beszel", "Datadog"], "correct": "Beszel"},
     {"id": 134, "topic": "My Cases", "question": "Какой домен у DevOps Interview Trainer?", "options": ["trainer.ddns.net", "trainer.myvnc.com", "devops.cuby.by", "interview.ai"], "correct": "trainer.ddns.net"},
-    {"id": 135, "topic": "My Cases", "question": "Сколько вопросов в DevOps Interview Trainer?", "options": ["50", "100", "150", "278"], "correct": "278"},
+    {"id": 135, "topic": "My Cases", "question": "Сколько вопросов в DevOps Interview Trainer?", "options": ["50", "100", "150", "248"], "correct": "248"},
     {"id": 136, "topic": "My Cases", "question": "Какой стек использует DevOps Interview Trainer?", "options": ["Flask + Nginx", "Django + Apache", "Node.js + Express", "Go + Nginx"], "correct": "Flask + Nginx"},
     {"id": 137, "topic": "My Cases", "question": "Что вы использовали для управления версиями Container Packer?", "options": ["Git", "SVN", "Mercurial", "Perforce"], "correct": "Git"},
     {"id": 138, "topic": "My Cases", "question": "Какой сервер использует Container Packer?", "options": ["VPS на Fornex", "AWS", "Google Cloud", "Azure"], "correct": "VPS на Fornex"},
@@ -216,8 +197,6 @@ questions = [
     {"id": 176, "topic": "My Cases", "question": "Что делает параметр MemoryMax в systemd?", "options": ["Ограничивает память сервиса", "Увеличивает память", "Задаёт swap", "Ничего не делает"], "correct": "Ограничивает память сервиса"},
     {"id": 177, "topic": "My Cases", "question": "Какой алгоритм используется для упаковки коробок?", "options": ["3D bin packing", "2D bin packing", "Genetic algorithm", "Greedy algorithm"], "correct": "3D bin packing"},
     {"id": 178, "topic": "My Cases", "question": "Какой порт использует Nginx для HTTPS?", "options": ["80", "443", "8080", "8443"], "correct": "443"},
-    
-    # ========== Scripting (20 вопросов) ==========
     {"id": 179, "topic": "Scripting", "question": "Какая библиотека Python используется для создания веб-приложений в Auto Inventory System?", "options": ["Django", "Flask", "FastAPI", "Tornado"], "correct": "Flask"},
     {"id": 180, "topic": "Scripting", "question": "Какой фреймворк Python используется в AI Post Generator для веб-интерфейса?", "options": ["Flask", "Django", "Streamlit", "FastAPI"], "correct": "Streamlit"},
     {"id": 181, "topic": "Scripting", "question": "Как в Python создать асинхронный ответ вебхука, чтобы не блокировать GitHub?", "options": ["asyncio", "threading", "multiprocessing", "celery"], "correct": "threading"},
@@ -238,38 +217,56 @@ questions = [
     {"id": 196, "topic": "Scripting", "question": "Как в Python обработать ошибку при HTTP-запросе?", "options": ["try/except", "if response.status_code != 200", "Оба варианта", "Ни один"], "correct": "Оба варианта"},
     {"id": 197, "topic": "Scripting", "question": "Как в JavaScript распарсить JSON-ответ от API?", "options": ["JSON.parse()", "response.json()", "Оба варианта", "Ни один"], "correct": "Оба варианта"},
     {"id": 198, "topic": "Scripting", "question": "Какой фреймворк Python используется в DevOps Interview Trainer?", "options": ["Django", "Flask", "FastAPI", "Streamlit"], "correct": "Flask"},
-    
-    # ========== Forgejo CI/CD (30 вопросов) ==========
-    {"id": 249, "topic": "Forgejo CI/CD", "question": "Что такое Forgejo?", "options": ["Платформа для хостинга Git-репозиториев (аналог GitHub)", "CI/CD сервер", "База данных", "Веб-сервер"], "correct": "Платформа для хостинга Git-репозиториев (аналог GitHub)"},
-    {"id": 250, "topic": "Forgejo CI/CD", "question": "Какой сервис используется в качестве CI/CD в связке с Forgejo?", "options": ["Jenkins", "GitLab CI", "Drone CI", "GitHub Actions"], "correct": "Drone CI"},
-    {"id": 251, "topic": "Forgejo CI/CD", "question": "Какой протокол использует Forgejo для уведомления Drone о новых коммитах?", "options": ["SSH", "Webhook", "FTP", "SMTP"], "correct": "Webhook"},
-    {"id": 252, "topic": "Forgejo CI/CD", "question": "На каком порту работает Drone Server в настроенной конфигурации?", "options": ["80", "443", "8000", "8080"], "correct": "8000"},
-    {"id": 253, "topic": "Forgejo CI/CD", "question": "Какая переменная окружения используется для связи Drone Server и Drone Runner?", "options": ["DRONE_RPC_SECRET", "DRONE_TOKEN", "DRONE_KEY", "DRONE_PASSWORD"], "correct": "DRONE_RPC_SECRET"},
-    {"id": 254, "topic": "Forgejo CI/CD", "question": "Что делает Drone Runner?", "options": ["Запускает пайплайны", "Хранит код", "Отправляет уведомления", "Управляет пользователями"], "correct": "Запускает пайплайны"},
-    {"id": 255, "topic": "Forgejo CI/CD", "question": "Какой файл конфигурации используется в Drone CI?", "options": [".drone.yml", ".woodpecker.yml", ".github/workflows", ".gitlab-ci.yml"], "correct": ".drone.yml"},
-    {"id": 256, "topic": "Forgejo CI/CD", "question": "Какой образ Docker используется для выполнения SSH-команд в пайплайне?", "options": ["alpine", "ubuntu", "appleboy/drone-ssh", "curlimages/curl"], "correct": "appleboy/drone-ssh"},
-    {"id": 257, "topic": "Forgejo CI/CD", "question": "Какой образ используется для отправки Telegram-уведомлений в пайплайне?", "options": ["appleboy/drone-telegram", "curlimages/curl", "alpine", "ubuntu"], "correct": "curlimages/curl"},
-    {"id": 258, "topic": "Forgejo CI/CD", "question": "Какой секрет необходимо добавить в Drone для доступа к серверу по SSH?", "options": ["ssh_key", "deploy_key", "server_key", "private_key"], "correct": "ssh_key"},
-    {"id": 259, "topic": "Forgejo CI/CD", "question": "Какой секрет необходимо добавить в Drone для отправки сообщений в Telegram?", "options": ["telegram_token", "bot_token", "tg_token", "api_key"], "correct": "telegram_token"},
-    {"id": 260, "topic": "Forgejo CI/CD", "question": "Какой командой запускается Drone Server в Docker?", "options": ["docker run -d --name drone-server -p 8000:80 ...", "docker start drone-server", "systemctl start drone", "drone server start"], "correct": "docker run -d --name drone-server -p 8000:80 ..."},
-    {"id": 261, "topic": "Forgejo CI/CD", "question": "Какой командой перезапускается systemd сервис post-generator в пайплайне?", "options": ["systemctl restart post-generator", "service post-generator restart", "restart post-generator", "docker restart post-generator"], "correct": "systemctl restart post-generator"},
-    {"id": 262, "topic": "Forgejo CI/CD", "question": "Как проверить, что вебхук Forgejo работает?", "options": ["curl -X POST http://localhost:8000/hook", "ping codeberg.org", "ssh forgejo", "docker logs drone"], "correct": "curl -X POST http://localhost:8000/hook"},
-    {"id": 263, "topic": "Forgejo CI/CD", "question": "Что делать, если вебхук Drone не отвечает (код 405)?", "options": ["Перезапустить Drone Server", "Поменять порт", "Обновить конфиг", "Переустановить Forgejo"], "correct": "Перезапустить Drone Server"},
-    {"id": 264, "topic": "Forgejo CI/CD", "question": "Как настроить автоматическое восстановление Drone при падении?", "options": ["Cron + webhook_monitor.sh", "Systemd сервис", "Docker restart policy", "Вручную"], "correct": "Cron + webhook_monitor.sh"},
-    {"id": 265, "topic": "Forgejo CI/CD", "question": "Какой скрипт проверяет доступность вебхука каждые 5 минут?", "options": ["webhook_monitor.sh", "healthcheck.sh", "drone_check.sh", "monitor.sh"], "correct": "webhook_monitor.sh"},
-    {"id": 266, "topic": "Forgejo CI/CD", "question": "Какой командой отправляется тестовый вебхук в Drone?", "options": ["curl -X POST http://localhost:8000/hook -d '{\"ref\":\"refs/heads/master\"}'", "drone webhook send", "webhook test", "curl http://localhost:8000/hook"], "correct": "curl -X POST http://localhost:8000/hook -d '{\"ref\":\"refs/heads/master\"}'"},
-    {"id": 267, "topic": "Forgejo CI/CD", "question": "Какой домен используется для AI Post Generator?", "options": ["aigenerator.myvnc.com", "ai.cuby.by", "generator.ai", "post.ai"], "correct": "aigenerator.myvnc.com"},
-    {"id": 268, "topic": "Forgejo CI/CD", "question": "Как называется Telegram-бот для уведомлений о деплое?", "options": ["@SeRveDog_bot", "@AIPostBot", "@DeployBot", "@DroneBot"], "correct": "@SeRveDog_bot"},
-    {"id": 269, "topic": "Forgejo CI/CD", "question": "Какой порт слушает Streamlit-приложение post-generator?", "options": ["8501", "8502", "8080", "8000"], "correct": "8502"},
-    {"id": 270, "topic": "Forgejo CI/CD", "question": "Какой параметр systemd ограничивает использование CPU?", "options": ["CPUQuota", "MemoryMax", "LimitCPU", "CPUMax"], "correct": "CPUQuota"},
-    {"id": 271, "topic": "Forgejo CI/CD", "question": "Какой параметр systemd ограничивает использование памяти?", "options": ["MemoryMax", "CPUQuota", "LimitMemory", "MemMax"], "correct": "MemoryMax"},
-    {"id": 272, "topic": "Forgejo CI/CD", "question": "Как часто cron запускает webhook_monitor.sh?", "options": ["Каждые 5 минут", "Каждую минуту", "Каждый час", "Раз в день"], "correct": "Каждые 5 минут"},
-    {"id": 273, "topic": "Forgejo CI/CD", "question": "Что происходит при успешном деплое в Telegram?", "options": ["Приходит уведомление с галочкой", "Ничего", "Приходит ошибка", "Перезапускается сервер"], "correct": "Приходит уведомление с галочкой"},
-    {"id": 274, "topic": "Forgejo CI/CD", "question": "Какая команда перезапускает Drone Server в скрипте мониторинга?", "options": ["docker restart drone-server", "systemctl restart drone", "reboot", "killall drone"], "correct": "docker restart drone-server"},
-    {"id": 275, "topic": "Forgejo CI/CD", "question": "Какой метод HTTP используется для вебхука Forgejo?", "options": ["POST", "GET", "PUT", "DELETE"], "correct": "POST"},
-    {"id": 276, "topic": "Forgejo CI/CD", "question": "Какой URL используется для вебхука в Forgejo?", "options": ["http://103.125.216.110:8000/hook", "http://localhost:8000/webhook", "https://codeberg.org/hook", "http://drone:8000/hook"], "correct": "http://103.125.216.110:8000/hook"},
-    {"id": 277, "topic": "Forgejo CI/CD", "question": "Какая ветка триггерит деплой?", "options": ["master", "main", "develop", "feature/*"], "correct": "master"},
-    {"id": 278, "topic": "Forgejo CI/CD", "question": "Какой шаг в .drone.yml отвечает за деплой?", "options": ["deploy", "build", "test", "notify"], "correct": "deploy"},
+    {"id": 199, "topic": "My Cases", "question": "Какая компания производит мобильные микрофабрики (MMF) для строительства домов?", "options": ["Cuby", "Tesla", "SpaceX", "Amazon"], "correct": "Cuby"},
+    {"id": 200, "topic": "My Cases", "question": "Какая штаб-квартира у компании Cuby?", "options": ["Минск, Беларусь", "Москва, Россия", "Уилмингтон, Делавэр, США", "Лондон, Великобритания"], "correct": "Уилмингтон, Делавэр, США"},
+    {"id": 201, "topic": "My Cases", "question": "Какова оценка компании Cuby после последнего раунда финансирования (Series B)?", "options": ["$100 млн", "$257.5 млн", "$500 млн", "$1 млрд"], "correct": "$257.5 млн"},
+    {"id": 202, "topic": "My Cases", "question": "Какой принцип Cuby помогает сократить количество строительных отходов?", "options": ["Быстрая сборка", "Цифровой раскрой материалов", "Ручной труд", "Использование бетона"], "correct": "Цифровой раскрой материалов"},
+    {"id": 203, "topic": "My Cases", "question": "Какую задачу решает Container Packer в компании Cuby?", "options": ["Упаковка коробок в контейнеры", "Учёт сотрудников", "Бухгалтерия", "Маркетинг"], "correct": "Упаковка коробок в контейнеры"},
+    {"id": 204, "topic": "My Cases", "question": "Сколько рабочих требуется для сборки дома по технологии Cuby?", "options": ["10-15", "20-30", "4 неквалифицированных", "1 квалифицированный"], "correct": "4 неквалифицированных"},
+    {"id": 205, "topic": "My Cases", "question": "За сколько дней собирается дом по технологии Cuby?", "options": ["7 дней", "14 дней", "30 дней", "60 дней"], "correct": "30 дней"},
+    {"id": 206, "topic": "My Cases", "question": "Какой тип контейнеров поддерживает Container Packer?", "options": ["10ft, 20ft", "20ft, 20HC, 40ft, 40HC", "Только 40ft", "Все размеры"], "correct": "20ft, 20HC, 40ft, 40HC"},
+    {"id": 207, "topic": "My Cases", "question": "Какой AI-инструмент вы используете для DevOps задач?", "options": ["Только ChatGPT", "Только GitHub Copilot", "DeepSeek + ChatGPT + Copilot", "Никакой"], "correct": "DeepSeek + ChatGPT + Copilot"},
+    {"id": 208, "topic": "My Cases", "question": "Как вы учились DevOps?", "options": ["На курсах", "По книгам", "Сразу на практике с AI (DeepSeek)", "На работе"], "correct": "Сразу на практике с AI (DeepSeek)"},
+    {"id": 209, "topic": "My Cases", "question": "Какой инструмент мониторинга вы используете для серверов?", "options": ["Prometheus", "Zabbix", "Beszel", "Datadog"], "correct": "Beszel"},
+    {"id": 210, "topic": "My Cases", "question": "Как часто вы получаете уведомления о деплое в Telegram?", "options": ["Никогда", "При каждом успешном деплое", "Только при ошибках", "Раз в день"], "correct": "При каждом успешном деплое"},
+    {"id": 211, "topic": "My Cases", "question": "Какой VPS провайдер используется для Container Packer?", "options": ["hoster.by", "kamatera.com", "fornex.com", "digitalocean.com"], "correct": "fornex.com"},
+    {"id": 212, "topic": "My Cases", "question": "Какой домен у DevOps Interview Trainer?", "options": ["trainer.ddns.net", "trainer.myvnc.com", "devops.cuby.by", "interview.ai"], "correct": "trainer.ddns.net"},
+    {"id": 213, "topic": "My Cases", "question": "Какую роль вы выполняете в проекте Container Packer?", "options": ["Пишу алгоритм упаковки", "Настраиваю CI/CD, деплой, мониторинг", "Дизайн UI", "Маркетинг"], "correct": "Настраиваю CI/CD, деплой, мониторинг"},
+    {"id": 214, "topic": "My Cases", "question": "Какую библиотеку вы установили для ускорения NumPy?", "options": ["CUDA", "OpenBLAS", "TensorFlow", "PyTorch"], "correct": "OpenBLAS"},
+    {"id": 215, "topic": "My Cases", "question": "Сколько времени занимает компоновка контейнера после оптимизации?", "options": ["30 секунд", "2-3 минуты", "6-7 минут", "10 минут"], "correct": "2-3 минуты"},
+    {"id": 216, "topic": "My Cases", "question": "Что показывает ошибка 502 Bad Gateway?", "options": ["Сервер не найден", "Шлюз не получил ответ от бэкенда", "Нет доступа", "Слишком много запросов"], "correct": "Шлюз не получил ответ от бэкенда"},
+    {"id": 217, "topic": "My Cases", "question": "Как вы исправили 502 Bad Gateway в Container Packer?", "options": ["Перезапустил Nginx", "Ограничил CPU через CPUQuota=80%", "Добавил больше памяти", "Обновил Python"], "correct": "Ограничил CPU через CPUQuota=80%"},
+    {"id": 218, "topic": "My Cases", "question": "Какой порт слушает вебхук в Container Packer?", "options": ["80", "443", "8080", "9000"], "correct": "9000"},
+    {"id": 219, "topic": "My Cases", "question": "Какой порт слушает Streamlit-приложение в Container Packer?", "options": ["80", "443", "8501", "9000"], "correct": "8501"},
+    {"id": 220, "topic": "My Cases", "question": "Какой параметр systemd ограничивает использование CPU?", "options": ["MemoryMax", "CPUQuota", "LimitCPU", "CPUMax"], "correct": "CPUQuota"},
+    {"id": 221, "topic": "My Cases", "question": "Какой параметр systemd ограничивает использование памяти?", "options": ["MemoryMax", "RAMLimit", "MemoryQuota", "MemMax"], "correct": "MemoryMax"},
+    {"id": 222, "topic": "My Cases", "question": "Как часто cron проверяет вебхук в Container Packer?", "options": ["Каждую минуту", "Каждые 5 минут", "Каждые 15 минут", "Каждый час"], "correct": "Каждые 5 минут"},
+    {"id": 223, "topic": "My Cases", "question": "Сколько времени занимает восстановление вебхука при падении?", "options": ["1-2 секунды", "5-6 секунд", "10-11 секунд", "Минута"], "correct": "5-6 секунд"},
+    {"id": 224, "topic": "My Cases", "question": "Сколько времени занимает восстановление приложения (Streamlit) при падении?", "options": ["1-2 секунды", "5-6 секунд", "10-11 секунд", "Минута"], "correct": "10-11 секунд"},
+    {"id": 225, "topic": "My Cases", "question": "Как часто запускается ределивер в GitHub Actions?", "options": ["Каждый час", "Каждые 6 часов", "Раз в день", "Раз в неделю"], "correct": "Каждые 6 часов"},
+    {"id": 226, "topic": "My Cases", "question": "На каком языке написан скрипт ределивера?", "options": ["Python", "Bash", "JavaScript (Node.js, Octokit)", "Go"], "correct": "JavaScript (Node.js, Octokit)"},
+    {"id": 227, "topic": "My Cases", "question": "Какой инструмент используется в ределивере для работы с GitHub API?", "options": ["axios", "requests", "Octokit", "fetch"], "correct": "Octokit"},
+    {"id": 228, "topic": "My Cases", "question": "Как называется Telegram-бот для уведомлений в Container Packer?", "options": ["ContainerBot", "PackerBot", "AutoInventoryBot", "DeployBot"], "correct": "AutoInventoryBot"},
+    {"id": 229, "topic": "My Cases", "question": "При каком заполнении диска приходит Telegram-уведомление?", "options": ["Более 50%", "Более 75%", "Более 85%", "Более 95%"], "correct": "Более 85%"},
+    {"id": 230, "topic": "My Cases", "question": "Какой фреймворк используется в DevOps Interview Trainer?", "options": ["Django", "Flask", "FastAPI", "Streamlit"], "correct": "Flask"},
+    {"id": 231, "topic": "My Cases", "question": "Как вы настраиваете мониторинг серверов?", "options": ["Prometheus", "Zabbix", "Beszel + Telegram-алерты", "Nagios"], "correct": "Beszel + Telegram-алерты"},
+    {"id": 232, "topic": "My Cases", "question": "Что вы внедрили в CRM Planfix для учёта?", "options": ["Учет ИТ-оборудования и ITSM-процессы", "Чат-бот", "Онлайн-магазин", "Биллинг"], "correct": "Учет ИТ-оборудования и ITSM-процессы"},
+    {"id": 233, "topic": "My Cases", "question": "Какой уникальный опыт вы получили на линии 102?", "options": ["Работа с критически важной системой 24/7", "Настройка маршрутизаторов", "Программирование на C++", "Администрирование Windows"], "correct": "Работа с критически важной системой 24/7"},
+    {"id": 234, "topic": "My Cases", "question": "Какой подход к обучению вы используете?", "options": ["Читаю книги", "Смотрю видео", "Сразу применяю на практике с AI", "Хожу на курсы"], "correct": "Сразу применяю на практике с AI"},
+    {"id": 235, "topic": "My Cases", "question": "Какой ваш главный инструмент для DevOps?", "options": ["VS Code", "PyCharm", "Терминал + bash + AI", "Git GUI"], "correct": "Терминал + bash + AI"},
+    {"id": 236, "topic": "My Cases", "question": "Какую версию Python вы используете после оптимизации?", "options": ["3.10", "3.11", "3.12", "3.13.13"], "correct": "3.13.13"},
+    {"id": 237, "topic": "My Cases", "question": "Какую компанию вы выбрали для работы и почему?", "options": ["Обычную IT-компанию", "Cuby — стройка будущего как IT-проект", "Банк", "Госструктуру"], "correct": "Cuby — стройка будущего как IT-проект"},
+    {"id": 238, "topic": "My Cases", "question": "Какой формат работы вы рассматриваете?", "options": ["Только офис", "Только удалённо", "Гибридный", "Не важно"], "correct": "Гибридный"},
+    {"id": 239, "topic": "My Cases", "question": "Как вы относитесь к использованию AI в работе?", "options": ["AI заменит инженеров", "AI — инструмент, который усиливает инженера", "AI вреден", "Никак"], "correct": "AI — инструмент, который усиливает инженера"},
+    {"id": 240, "topic": "My Cases", "question": "Какую зарплату вы ожидаете?", "options": ["2000 BYN", "2500 BYN", "от 3000 BYN в зависимости от задач", "5000 BYN"], "correct": "от 3000 BYN в зависимости от задач"},
+    {"id": 241, "topic": "My Cases", "question": "Как вы объясните DevOps бабушке?", "options": ["Чинят компьютеры", "Настраивают серверы", "Автоматизируют конвейер разработки, как конвейер на заводе", "Пишут код"], "correct": "Автоматизируют конвейер разработки, как конвейер на заводе"},
+    {"id": 242, "topic": "My Cases", "question": "Что такое SRE?", "options": ["Site Reliability Engineering — подход к надёжности", "Software Development", "System Administration", "Security Engineering"], "correct": "Site Reliability Engineering — подход к надёжности"},
+    {"id": 243, "topic": "My Cases", "question": "Какая ваша цель на ближайший год?", "options": ["Остаться на месте", "Вырасти до Middle DevOps", "Уйти в разработку", "Уйти в управление"], "correct": "Вырасти до Middle DevOps"},
+    {"id": 244, "topic": "My Cases", "question": "Какой ваш любимый проект?", "options": ["Auto Inventory", "AI Post Generator", "Container Packer", "DevOps Interview Trainer"], "correct": "Container Packer"},
+    {"id": 245, "topic": "My Cases", "question": "Что вам больше всего нравится в DevOps?", "options": ["Писать код", "Настраивать серверы", "Автоматизация и видеть результат", "Документация"], "correct": "Автоматизация и видеть результат"},
+    {"id": 246, "topic": "My Cases", "question": "Что такое вайбкодинг (vibe coding)?", "options": ["Программирование в хорошем настроении", "Разработка с активным использованием AI и нейросетей", "Быстрое прототипирование", "Кодинг под музыку"], "correct": "Разработка с активным использованием AI и нейросетей"},
+    {"id": 247, "topic": "My Cases", "question": "Какой AI вы используете чаще всего?", "options": ["ChatGPT", "GitHub Copilot", "DeepSeek", "Claude"], "correct": "DeepSeek"},
+    {"id": 248, "topic": "My Cases", "question": "Как вы попали в DevOps?", "options": ["Через курсы", "Через книги", "Через практику с AI и DeepSeek", "Через работу"], "correct": "Через практику с AI и DeepSeek"},
 ]
 
 # ============================================
@@ -306,8 +303,8 @@ def home():
     </head>
     <body>
         <h1>DevOps Interview Trainer</h1>
-        <p>Тренажёр по Linux, CI/CD, сетям, Docker, K8s, Terraform, мониторингу, безопасности, скриптингу, Forgejo CI/CD и вашим кейсам.</p>
-        <p><strong>Всего вопросов: 278</strong></p>
+        <p>Тренажёр по Linux, CI/CD, сетям, Docker, K8s, Terraform, мониторингу, безопасности, скриптингу и вашим кейсам.</p>
+        <p><strong>Всего вопросов: 248</strong></p>
 
         <div class="topic-select">
             <h3>По темам</h3>
@@ -315,7 +312,7 @@ def home():
     topics = [("Linux", "Linux"), ("CI/CD", "CI/CD"), ("Networks", "Сети"), ("Docker", "Docker"),
               ("Kubernetes", "Kubernetes"), ("Terraform", "Terraform"), ("Monitoring", "Мониторинг"),
               ("Databases", "Базы данных"), ("Security", "Безопасность"), ("My Cases", "Мои кейсы"),
-              ("Scripting", "Скриптинг"), ("Forgejo CI/CD", "Forgejo CI/CD")]
+              ("Scripting", "Скриптинг")]
 
     for topic_key, topic_name in topics:
         count = topic_counts.get(topic_key, 0)
@@ -403,11 +400,10 @@ def start():
     name_map = {"Linux": "Linux", "CI/CD": "CI/CD", "Networks": "Сети", "Docker": "Docker",
                "Kubernetes": "Kubernetes", "Terraform": "Terraform", "Monitoring": "Мониторинг",
                "Databases": "Базы данных", "Security": "Безопасность", "My Cases": "Мои кейсы",
-               "Scripting": "Скриптинг", "Forgejo CI/CD": "Forgejo CI/CD"}
+               "Scripting": "Скриптинг"}
     session['mode'] = f"{name_map.get(topic, topic)} ({len(session['question_ids'])} вопросов)"
 
     return redirect('/quiz')
-
 @app.route('/quiz')
 def quiz():
     if 'question_ids' not in session or session['current_index'] >= len(session['question_ids']):
