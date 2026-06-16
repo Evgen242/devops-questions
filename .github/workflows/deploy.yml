@@ -1,6 +1,7 @@
 name: Deploy Questions to Trainer
 
 on:
+  workflow_dispatch:
   push:
     branches: [ main ]
     paths:
