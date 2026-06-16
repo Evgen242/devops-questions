@@ -14,13 +14,13 @@ def generate_app():
                 q['topic'] = topic
                 all_questions.append(q)
     
-    # Генерируем список вопросов
+    # Генерируем список вопросов с порядковыми номерами
     questions_list = []
-    for q in all_questions:
+    for idx, q in enumerate(all_questions, start=1):
         question = q["question"].replace('"', '\\"')
         correct = q["correct"].replace('"', '\\"')
         options = q["options"]
-        questions_list.append(f'    {{"id": {q["id"]}, "topic": "{q["topic"]}", "question": "{question}", "options": {options}, "correct": "{correct}"}}')
+        questions_list.append(f'    {{"id": {idx}, "topic": "{q["topic"]}", "question": "{question}", "options": {options}, "correct": "{correct}"}}')
     
     questions_str = "questions = [\n" + ",\n".join(questions_list) + "\n]\n"
     
