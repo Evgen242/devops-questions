@@ -1,0 +1,82 @@
+{
+  "topic": "Terraform",
+  "questions": [
+    {
+      "topic": "Terraform",
+      "question": "Что такое Terraform?",
+      "options": [
+        "Инструмент IaC (Infrastructure as Code)",
+        "CI/CD система",
+        "База данных",
+        "Веб-сервер"
+      ],
+      "correct": "Инструмент IaC (Infrastructure as Code)"
+    },
+    {
+      "topic": "Terraform",
+      "question": "Что такое 'terraform plan'?",
+      "options": [
+        "Показывает изменения до применения",
+        "Применяет изменения",
+        "Удаляет инфраструктуру",
+        "Создает план работ"
+      ],
+      "correct": "Показывает изменения до применения"
+    },
+    {
+      "topic": "Terraform",
+      "question": "Что такое состояние (state) в Terraform?",
+      "options": [
+        "Файл с информацией о ресурсах",
+        "Система мониторинга",
+        "База данных",
+        "Логи"
+      ],
+      "correct": "Файл с информацией о ресурсах"
+    },
+    {
+      "topic": "Terraform",
+      "question": "Чем отличается Terraform от Ansible?",
+      "options": [
+        "Terraform для управления инфраструктурой, Ansible для конфигурации",
+        "Они одинаковые",
+        "Terraform для конфигурации, Ansible для инфраструктуры",
+        "Ни чем"
+      ],
+      "correct": "Terraform для управления инфраструктурой, Ansible для конфигурации"
+    },
+    {
+      "topic": "Terraform",
+      "question": "Что такое провайдер в Terraform?",
+      "options": [
+        "Плагин для взаимодействия с API (AWS, GCP, Azure)",
+        "Тип ресурса",
+        "Система мониторинга",
+        "База данных"
+      ],
+      "correct": "Плагин для взаимодействия с API (AWS, GCP, Azure)"
+    },
+    {
+      "topic": "Terraform",
+      "question": "Как импортировать существующий ресурс?",
+      "options": [
+        "terraform import <address> <id>",
+        "terraform add",
+        "terraform create",
+        "terraform load"
+      ],
+      "correct": "terraform import <address> <id>"
+    },
+    {
+      "topic": "Terraform",
+      "question": "Что делает 'terraform destroy'?",
+      "options": [
+        "Уничтожает всю инфраструктуру",
+        "Сохраняет состояние",
+        "Применяет изменения",
+        "Показывает план"
+      ],
+      "correct": "Уничтожает всю инфраструктуру"
+    }
+  ]
+}

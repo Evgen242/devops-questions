@@ -1,0 +1,291 @@
+{
+  "topic": "Linux",
+  "questions": [
+    {
+      "topic": "Linux",
+      "question": "Как посмотреть логи systemd-сервиса в реальном времени?",
+      "options": [
+        "systemctl logs -f",
+        "journalctl -u <service> -f",
+        "tail -f /var/log/syslog",
+        "dmesg -w"
+      ],
+      "correct": "journalctl -u <service> -f"
+    },
+    {
+      "topic": "Linux",
+      "question": "Как ограничить CPU для systemd-сервиса?",
+      "options": [
+        "CPULimit=80",
+        "CPUQuota=80%",
+        "LimitCPU=80",
+        "CPU=80%"
+      ],
+      "correct": "CPUQuota=80%"
+    },
+    {
+      "topic": "Linux",
+      "question": "Как перезагрузить конфигурацию systemd после изменения файла?",
+      "options": [
+        "systemctl restart",
+        "systemctl reload",
+        "systemctl daemon-reload",
+        "systemctl update"
+      ],
+      "correct": "systemctl daemon-reload"
+    },
+    {
+      "topic": "Linux",
+      "question": "Как посмотреть список всех активных сервисов systemd?",
+      "options": [
+        "systemctl list",
+        "systemctl status",
+        "systemctl list-units --type=service",
+        "systemctl show"
+      ],
+      "correct": "systemctl list-units --type=service"
+    },
+    {
+      "topic": "Linux",
+      "question": "Какая команда показывает использование диска в человеко-читаемом формате?",
+      "options": [
+        "du -h",
+        "df -h",
+        "ls -lh",
+        "fdisk -l"
+      ],
+      "correct": "df -h"
+    },
+    {
+      "topic": "Linux",
+      "question": "Как посмотреть, какие порты слушает сервер?",
+      "options": [
+        "netstat -tlnp",
+        "iptables -L",
+        "ss -s",
+        "tcpdump"
+      ],
+      "correct": "netstat -tlnp"
+    },
+    {
+      "topic": "Linux",
+      "question": "Как найти процесс, который ест 100% CPU?",
+      "options": [
+        "htop (нажать P)",
+        "ls -l",
+        "ps aux",
+        "kill -9"
+      ],
+      "correct": "htop (нажать P)"
+    },
+    {
+      "topic": "Linux",
+      "question": "Что делает команда 'chmod +x script.sh'?",
+      "options": [
+        "Удаляет файл",
+        "Делает файл исполняемым",
+        "Копирует файл",
+        "Переименовывает файл"
+      ],
+      "correct": "Делает файл исполняемым"
+    },
+    {
+      "topic": "Linux",
+      "question": "Как посмотреть размер папки?",
+      "options": [
+        "ls -la",
+        "du -sh",
+        "df -h",
+        "find . -size"
+      ],
+      "correct": "du -sh"
+    },
+    {
+      "topic": "Linux",
+      "question": "Как посмотреть историю команд в Bash?",
+      "options": [
+        "history",
+        "cat ~/.bash_history",
+        "Оба варианта",
+        "Ни один"
+      ],
+      "correct": "Оба варианта"
+    },
+    {
+      "topic": "Linux",
+      "question": "Что такое inode?",
+      "options": [
+        "Структура с метаданными файла",
+        "IP адрес",
+        "Сетевое соединение",
+        "Тип файловой системы"
+      ],
+      "correct": "Структура с метаданными файла"
+    },
+    {
+      "topic": "Linux",
+      "question": "Как применить права 755 к папке рекурсивно?",
+      "options": [
+        "chmod 755 *",
+        "chmod -R 755 ./",
+        "chmod 755 -R",
+        "chmod 755"
+      ],
+      "correct": "chmod -R 755 ./"
+    },
+    {
+      "topic": "Linux",
+      "question": "Что такое cron?",
+      "options": [
+        "Сервис для мониторинга",
+        "Планировщик задач",
+        "Система логирования",
+        "База данных"
+      ],
+      "correct": "Планировщик задач"
+    },
+    {
+      "topic": "Linux",
+      "question": "Как посмотреть последние 10 строк лога?",
+      "options": [
+        "head -10 file",
+        "tail -10 file",
+        "less file",
+        "grep -10 file"
+      ],
+      "correct": "tail -10 file"
+    },
+    {
+      "topic": "Linux",
+      "question": "Что такое swap?",
+      "options": [
+        "Место на диске для расширения RAM",
+        "Тип процессора",
+        "Сетевое соединение",
+        "Системный вызов"
+      ],
+      "correct": "Место на диске для расширения RAM"
+    },
+    {
+      "topic": "Linux",
+      "question": "Как убить процесс по имени?",
+      "options": [
+        "kill <pid>",
+        "pkill <name>",
+        "killall <name>",
+        "Оба варианта pkill и killall"
+      ],
+      "correct": "Оба варианта pkill и killall"
+    },
+    {
+      "topic": "Linux",
+      "question": "Что делает команда 'grep -r pattern /path'?",
+      "options": [
+        "Ищет файлы по имени",
+        "Ищет паттерн в файлах рекурсивно",
+        "Удаляет файлы с паттерном",
+        "Заменяет паттерн"
+      ],
+      "correct": "Ищет паттерн в файлах рекурсивно"
+    },
+    {
+      "topic": "Linux",
+      "question": "Как посмотреть загрузку CPU в реальном времени?",
+      "options": [
+        "top",
+        "htop",
+        "ps aux",
+        "Все варианты"
+      ],
+      "correct": "Все варианты"
+    },
+    {
+      "topic": "Linux",
+      "question": "Что такое SSH?",
+      "options": [
+        "Протокол удалённого доступа",
+        "Сетевой файрвол",
+        "Система логирования",
+        "База данных"
+      ],
+      "correct": "Протокол удалённого доступа"
+    },
+    {
+      "topic": "Linux",
+      "question": "Как создать systemd-сервис?",
+      "options": [
+        "Создать файл в /etc/systemd/system/*.service",
+        "Запустить systemd-create",
+        "Использовать init.d",
+        "Все варианты"
+      ],
+      "correct": "Создать файл в /etc/systemd/system/*.service"
+    },
+    {
+      "topic": "Linux",
+      "question": "Что делает команда 'ps aux'?",
+      "options": [
+        "Показывает все процессы",
+        "Удаляет процессы",
+        "Создает процессы",
+        "Останавливает процессы"
+      ],
+      "correct": "Показывает все процессы"
+    },
+    {
+      "topic": "Linux",
+      "question": "Как посмотреть версию ядра Linux?",
+      "options": [
+        "uname -r",
+        "kernel --version",
+        "version",
+        "cat /proc/version"
+      ],
+      "correct": "uname -r"
+    },
+    {
+      "topic": "Linux",
+      "question": "Как посмотреть загрузку памяти?",
+      "options": [
+        "free -h",
+        "top",
+        "htop",
+        "Все варианты"
+      ],
+      "correct": "Все варианты"
+    },
+    {
+      "topic": "Linux",
+      "question": "Что делает команда 'systemctl daemon-reload'?",
+      "options": [
+        "Перезагружает systemd",
+        "Перечитывает конфигурацию systemd",
+        "Перезапускает все сервисы",
+        "Останавливает systemd"
+      ],
+      "correct": "Перечитывает конфигурацию systemd"
+    },
+    {
+      "topic": "Linux",
+      "question": "Какой лимит CPU установлен для Container Packer в systemd?",
+      "options": [
+        "50%",
+        "80%",
+        "100%",
+        "200%"
+      ],
+      "correct": "80%"
+    },
+    {
+      "topic": "Linux",
+      "question": "Какой лимит памяти установлен для Container Packer в systemd?",
+      "options": [
+        "256MB",
+        "512MB",
+        "800MB",
+        "1GB"
+      ],
+      "correct": "800MB"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "topic": "Databases",
+  "questions": [
+    {
+      "topic": "Databases",
+      "question": "Что такое SQL?",
+      "options": [
+        "Язык запросов к базам данных",
+        "База данных",
+        "Сервер БД",
+        "CI/CD система"
+      ],
+      "correct": "Язык запросов к базам данных"
+    },
+    {
+      "topic": "Databases",
+      "question": "Чем отличается PostgreSQL от MySQL?",
+      "options": [
+        "PostgreSQL — объектно-реляционная, MySQL — реляционная",
+        "Они одинаковые",
+        "PostgreSQL быстрее",
+        "MySQL — ORM"
+      ],
+      "correct": "PostgreSQL — объектно-реляционная, MySQL — реляционная"
+    },
+    {
+      "topic": "Databases",
+      "question": "Что такое JOIN?",
+      "options": [
+        "Объединение таблиц",
+        "Создание индекса",
+        "Удаление данных",
+        "Создание БД"
+      ],
+      "correct": "Объединение таблиц"
+    },
+    {
+      "topic": "Databases",
+      "question": "Как сделать резервное копирование PostgreSQL?",
+      "options": [
+        "pg_dump dbname > backup.sql",
+        "psql dump",
+        "backup postgres",
+        "pg_backup"
+      ],
+      "correct": "pg_dump dbname > backup.sql"
+    },
+    {
+      "topic": "Databases",
+      "question": "Что такое индекс в БД?",
+      "options": [
+        "Ускоряет поиск данных",
+        "Тип данных",
+        "Система логирования",
+        "CI/CD система"
+      ],
+      "correct": "Ускоряет поиск данных"
+    }
+  ]
+}

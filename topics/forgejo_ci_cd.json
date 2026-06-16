@@ -1,0 +1,324 @@
+{
+  "topic": "Forgejo CI/CD",
+  "questions": [
+    {
+      "topic": "Forgejo CI/CD",
+      "question": "Что такое Forgejo?",
+      "options": [
+        "Платформа для хостинга Git-репозиториев (аналог GitHub)",
+        "CI/CD сервер",
+        "База данных",
+        "Веб-сервер"
+      ],
+      "correct": "Платформа для хостинга Git-репозиториев (аналог GitHub)"
+    },
+    {
+      "topic": "Forgejo CI/CD",
+      "question": "Какой сервис используется в качестве CI/CD в связке с Forgejo?",
+      "options": [
+        "Jenkins",
+        "GitLab CI",
+        "Drone CI",
+        "GitHub Actions"
+      ],
+      "correct": "Drone CI"
+    },
+    {
+      "topic": "Forgejo CI/CD",
+      "question": "Какой протокол использует Forgejo для уведомления Drone о новых коммитах?",
+      "options": [
+        "SSH",
+        "Webhook",
+        "FTP",
+        "SMTP"
+      ],
+      "correct": "Webhook"
+    },
+    {
+      "topic": "Forgejo CI/CD",
+      "question": "На каком порту работает Drone Server в настроенной конфигурации?",
+      "options": [
+        "80",
+        "443",
+        "8000",
+        "8080"
+      ],
+      "correct": "8000"
+    },
+    {
+      "topic": "Forgejo CI/CD",
+      "question": "Какая переменная окружения используется для связи Drone Server и Drone Runner?",
+      "options": [
+        "DRONE_RPC_SECRET",
+        "DRONE_TOKEN",
+        "DRONE_KEY",
+        "DRONE_PASSWORD"
+      ],
+      "correct": "DRONE_RPC_SECRET"
+    },
+    {
+      "topic": "Forgejo CI/CD",
+      "question": "Что делает Drone Runner?",
+      "options": [
+        "Запускает пайплайны",
+        "Хранит код",
+        "Отправляет уведомления",
+        "Управляет пользователями"
+      ],
+      "correct": "Запускает пайплайны"
+    },
+    {
+      "topic": "Forgejo CI/CD",
+      "question": "Какой файл конфигурации используется в Drone CI?",
+      "options": [
+        ".drone.yml",
+        ".woodpecker.yml",
+        ".github/workflows",
+        ".gitlab-ci.yml"
+      ],
+      "correct": ".drone.yml"
+    },
+    {
+      "topic": "Forgejo CI/CD",
+      "question": "Какой образ Docker используется для выполнения SSH-команд в пайплайне?",
+      "options": [
+        "alpine",
+        "ubuntu",
+        "appleboy/drone-ssh",
+        "curlimages/curl"
+      ],
+      "correct": "appleboy/drone-ssh"
+    },
+    {
+      "topic": "Forgejo CI/CD",
+      "question": "Какой образ используется для отправки Telegram-уведомлений в пайплайне?",
+      "options": [
+        "appleboy/drone-telegram",
+        "curlimages/curl",
+        "alpine",
+        "ubuntu"
+      ],
+      "correct": "curlimages/curl"
+    },
+    {
+      "topic": "Forgejo CI/CD",
+      "question": "Какой секрет необходимо добавить в Drone для доступа к серверу по SSH?",
+      "options": [
+        "ssh_key",
+        "deploy_key",
+        "server_key",
+        "private_key"
+      ],
+      "correct": "ssh_key"
+    },
+    {
+      "topic": "Forgejo CI/CD",
+      "question": "Какой секрет необходимо добавить в Drone для отправки сообщений в Telegram?",
+      "options": [
+        "telegram_token",
+        "bot_token",
+        "tg_token",
+        "api_key"
+      ],
+      "correct": "telegram_token"
+    },
+    {
+      "topic": "Forgejo CI/CD",
+      "question": "Какой командой запускается Drone Server в Docker?",
+      "options": [
+        "docker run -d --name drone-server -p 8000:80 ...",
+        "docker start drone-server",
+        "systemctl start drone",
+        "drone server start"
+      ],
+      "correct": "docker run -d --name drone-server -p 8000:80 ..."
+    },
+    {
+      "topic": "Forgejo CI/CD",
+      "question": "Какой командой перезапускается systemd сервис post-generator в пайплайне?",
+      "options": [
+        "systemctl restart post-generator",
+        "service post-generator restart",
+        "restart post-generator",
+        "docker restart post-generator"
+      ],
+      "correct": "systemctl restart post-generator"
+    },
+    {
+      "topic": "Forgejo CI/CD",
+      "question": "Как проверить, что вебхук Forgejo работает?",
+      "options": [
+        "curl -X POST http://localhost:8000/hook",
+        "ping codeberg.org",
+        "ssh forgejo",
+        "docker logs drone"
+      ],
+      "correct": "curl -X POST http://localhost:8000/hook"
+    },
+    {
+      "topic": "Forgejo CI/CD",
+      "question": "Что делать, если вебхук Drone не отвечает (код 405)?",
+      "options": [
+        "Перезапустить Drone Server",
+        "Поменять порт",
+        "Обновить конфиг",
+        "Переустановить Forgejo"
+      ],
+      "correct": "Перезапустить Drone Server"
+    },
+    {
+      "topic": "Forgejo CI/CD",
+      "question": "Как настроить автоматическое восстановление Drone при падении?",
+      "options": [
+        "Cron + webhook_monitor.sh",
+        "Systemd сервис",
+        "Docker restart policy",
+        "Вручную"
+      ],
+      "correct": "Cron + webhook_monitor.sh"
+    },
+    {
+      "topic": "Forgejo CI/CD",
+      "question": "Какой скрипт проверяет доступность вебхука каждые 5 минут?",
+      "options": [
+        "webhook_monitor.sh",
+        "healthcheck.sh",
+        "drone_check.sh",
+        "monitor.sh"
+      ],
+      "correct": "webhook_monitor.sh"
+    },
+    {
+      "topic": "Forgejo CI/CD",
+      "question": "Какой домен используется для AI Post Generator?",
+      "options": [
+        "aigenerator.myvnc.com",
+        "ai.cuby.by",
+        "generator.ai",
+        "post.ai"
+      ],
+      "correct": "aigenerator.myvnc.com"
+    },
+    {
+      "topic": "Forgejo CI/CD",
+      "question": "Как называется Telegram-бот для уведомлений о деплое?",
+      "options": [
+        "@SeRveDog_bot",
+        "@AIPostBot",
+        "@DeployBot",
+        "@DroneBot"
+      ],
+      "correct": "@SeRveDog_bot"
+    },
+    {
+      "topic": "Forgejo CI/CD",
+      "question": "Какой порт слушает Streamlit-приложение post-generator?",
+      "options": [
+        "8501",
+        "8502",
+        "8080",
+        "8000"
+      ],
+      "correct": "8502"
+    },
+    {
+      "topic": "Forgejo CI/CD",
+      "question": "Какой параметр systemd ограничивает использование CPU?",
+      "options": [
+        "CPUQuota",
+        "MemoryMax",
+        "LimitCPU",
+        "CPUMax"
+      ],
+      "correct": "CPUQuota"
+    },
+    {
+      "topic": "Forgejo CI/CD",
+      "question": "Какой параметр systemd ограничивает использование памяти?",
+      "options": [
+        "MemoryMax",
+        "CPUQuota",
+        "LimitMemory",
+        "MemMax"
+      ],
+      "correct": "MemoryMax"
+    },
+    {
+      "topic": "Forgejo CI/CD",
+      "question": "Как часто cron запускает webhook_monitor.sh?",
+      "options": [
+        "Каждые 5 минут",
+        "Каждую минуту",
+        "Каждый час",
+        "Раз в день"
+      ],
+      "correct": "Каждые 5 минут"
+    },
+    {
+      "topic": "Forgejo CI/CD",
+      "question": "Что происходит при успешном деплое в Telegram?",
+      "options": [
+        "Приходит уведомление с галочкой",
+        "Ничего",
+        "Приходит ошибка",
+        "Перезапускается сервер"
+      ],
+      "correct": "Приходит уведомление с галочкой"
+    },
+    {
+      "topic": "Forgejo CI/CD",
+      "question": "Какая команда перезапускает Drone Server в скрипте мониторинга?",
+      "options": [
+        "docker restart drone-server",
+        "systemctl restart drone",
+        "reboot",
+        "killall drone"
+      ],
+      "correct": "docker restart drone-server"
+    },
+    {
+      "topic": "Forgejo CI/CD",
+      "question": "Какой метод HTTP используется для вебхука Forgejo?",
+      "options": [
+        "POST",
+        "GET",
+        "PUT",
+        "DELETE"
+      ],
+      "correct": "POST"
+    },
+    {
+      "topic": "Forgejo CI/CD",
+      "question": "Какой URL используется для вебхука в Forgejo?",
+      "options": [
+        "http://103.125.216.110:8000/hook",
+        "http://localhost:8000/webhook",
+        "https://codeberg.org/hook",
+        "http://drone:8000/hook"
+      ],
+      "correct": "http://103.125.216.110:8000/hook"
+    },
+    {
+      "topic": "Forgejo CI/CD",
+      "question": "Какая ветка триггерит деплой?",
+      "options": [
+        "master",
+        "main",
+        "develop",
+        "feature/*"
+      ],
+      "correct": "master"
+    },
+    {
+      "topic": "Forgejo CI/CD",
+      "question": "Какой шаг в .drone.yml отвечает за деплой?",
+      "options": [
+        "deploy",
+        "build",
+        "test",
+        "notify"
+      ],
+      "correct": "deploy"
+    }
+  ]
+}

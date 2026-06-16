@@ -1,0 +1,214 @@
+{
+  "topic": "Docker",
+  "questions": [
+    {
+      "topic": "Docker",
+      "question": "Что такое Docker?",
+      "options": [
+        "Виртуальная машина",
+        "Система контейнеризации",
+        "Язык программирования",
+        "База данных"
+      ],
+      "correct": "Система контейнеризации"
+    },
+    {
+      "topic": "Docker",
+      "question": "Чем отличается контейнер от виртуальной машины?",
+      "options": [
+        "Контейнер легче и использует ядро хоста",
+        "Контейнер тяжелее",
+        "Это одно и то же",
+        "ВМ легче"
+      ],
+      "correct": "Контейнер легче и использует ядро хоста"
+    },
+    {
+      "topic": "Docker",
+      "question": "Какая команда собирает Docker образ?",
+      "options": [
+        "docker build",
+        "docker create",
+        "docker run",
+        "docker start"
+      ],
+      "correct": "docker build"
+    },
+    {
+      "topic": "Docker",
+      "question": "Что делает 'docker-compose up -d'?",
+      "options": [
+        "Останавливает все контейнеры",
+        "Запускает все контейнеры из docker-compose.yml в фоне",
+        "Удаляет контейнеры",
+        "Собирает образы"
+      ],
+      "correct": "Запускает все контейнеры из docker-compose.yml в фоне"
+    },
+    {
+      "topic": "Docker",
+      "question": "Как посмотреть запущенные контейнеры?",
+      "options": [
+        "docker ps",
+        "docker list",
+        "docker show",
+        "docker containers"
+      ],
+      "correct": "docker ps"
+    },
+    {
+      "topic": "Docker",
+      "question": "Как остановить контейнер?",
+      "options": [
+        "docker stop <id>",
+        "docker kill <id>",
+        "docker rm <id>",
+        "docker pause <id>"
+      ],
+      "correct": "docker stop <id>"
+    },
+    {
+      "topic": "Docker",
+      "question": "Что такое Docker Compose?",
+      "options": [
+        "Инструмент для многоконтейнерных приложений",
+        "Язык разметки",
+        "База данных",
+        "Веб-сервер"
+      ],
+      "correct": "Инструмент для многоконтейнерных приложений"
+    },
+    {
+      "topic": "Docker",
+      "question": "Что такое Dockerfile?",
+      "options": [
+        "Файл с инструкциями для сборки образа",
+        "Файл с конфигурацией сети",
+        "Файл с логами",
+        "Файл с данными"
+      ],
+      "correct": "Файл с инструкциями для сборки образа"
+    },
+    {
+      "topic": "Docker",
+      "question": "Как удалить все неиспользуемые образы и контейнеры?",
+      "options": [
+        "docker system prune -a",
+        "docker rm -a",
+        "docker rmi -a",
+        "docker clean all"
+      ],
+      "correct": "docker system prune -a"
+    },
+    {
+      "topic": "Docker",
+      "question": "Что такое volume в Docker?",
+      "options": [
+        "Механизм сохранения данных вне контейнера",
+        "Тип сети",
+        "Контейнер с БД",
+        "Образ Docker"
+      ],
+      "correct": "Механизм сохранения данных вне контейнера"
+    },
+    {
+      "topic": "Docker",
+      "question": "Как посмотреть логи контейнера?",
+      "options": [
+        "docker logs <id>",
+        "docker logs -f <id>",
+        "Оба варианта",
+        "Ни один"
+      ],
+      "correct": "Оба варианта"
+    },
+    {
+      "topic": "Docker",
+      "question": "Что такое Docker Hub?",
+      "options": [
+        "Регистр хранения Docker образов",
+        "Инструмент оркестрации",
+        "Система мониторинга",
+        "Тип сети"
+      ],
+      "correct": "Регистр хранения Docker образов"
+    },
+    {
+      "topic": "Docker",
+      "question": "Что делает 'docker exec'?",
+      "options": [
+        "Запускает команду внутри работающего контейнера",
+        "Удаляет контейнер",
+        "Останавливает контейнер",
+        "Создает образ"
+      ],
+      "correct": "Запускает команду внутри работающего контейнера"
+    },
+    {
+      "topic": "Docker",
+      "question": "Как ограничить ресурсы контейнера?",
+      "options": [
+        "--memory=512m --cpus=0.5",
+        "--limit-mem=512",
+        "--res=512",
+        "Нельзя"
+      ],
+      "correct": "--memory=512m --cpus=0.5"
+    },
+    {
+      "topic": "Docker",
+      "question": "Что такое Docker Swarm?",
+      "options": [
+        "Инструмент оркестрации контейнеров",
+        "База данных",
+        "Веб-сервер",
+        "Язык программирования"
+      ],
+      "correct": "Инструмент оркестрации контейнеров"
+    },
+    {
+      "topic": "Docker",
+      "question": "Что такое 'multi-stage build' в Docker?",
+      "options": [
+        "Многоэтапная сборка для уменьшения образа",
+        "Тип контейнера",
+        "Сеть Docker",
+        "Система мониторинга"
+      ],
+      "correct": "Многоэтапная сборка для уменьшения образа"
+    },
+    {
+      "topic": "Docker",
+      "question": "Что делает 'docker push'?",
+      "options": [
+        "Отправляет образ в реестр",
+        "Загружает образ",
+        "Удаляет образ",
+        "Создает контейнер"
+      ],
+      "correct": "Отправляет образ в реестр"
+    },
+    {
+      "topic": "Docker",
+      "question": "Что такое Dockerfile?",
+      "options": [
+        "Файл с инструкциями для сборки образа",
+        "Файл с конфигурацией сети",
+        "Файл с логами",
+        "Файл с данными"
+      ],
+      "correct": "Файл с инструкциями для сборки образа"
+    },
+    {
+      "topic": "Docker",
+      "question": "Какая команда собирает Docker образ из Dockerfile?",
+      "options": [
+        "docker create",
+        "docker build",
+        "docker run",
+        "docker start"
+      ],
+      "correct": "docker build"
+    }
+  ]
+}

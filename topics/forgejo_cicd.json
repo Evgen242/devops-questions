@@ -1,0 +1,8 @@
+{
+  "topic": "Forgejo CI/CD",
+  "questions": [
+    {"id": 1, "question": "Что такое Forgejo?", "options": ["Платформа для хостинга Git", "CI/CD сервер", "База данных", "Веб-сервер"], "correct": "Платформа для хостинга Git"},
+    {"id": 2, "question": "Какой CI/CD сервер используется с Forgejo?", "options": ["Jenkins", "Drone CI", "GitLab CI", "GitHub Actions"], "correct": "Drone CI"},
+    {"id": 3, "question": "Какой протокол использует Forgejo для уведомления Drone?", "options": ["SSH", "Webhook", "FTP", "SMTP"], "correct": "Webhook"}
+  ]
+}

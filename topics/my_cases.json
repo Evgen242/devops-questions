@@ -1,0 +1,445 @@
+{
+  "topic": "My Cases",
+  "questions": [
+    {
+      "topic": "My Cases",
+      "question": "Как вы починили 502 Bad Gateway на Container Packer?",
+      "options": [
+        "Перезапустил Nginx",
+        "Ограничил CPU через CPUQuota=80% в systemd",
+        "Добавил больше памяти",
+        "Обновил Python"
+      ],
+      "correct": "Ограничил CPU через CPUQuota=80% в systemd"
+    },
+    {
+      "topic": "My Cases",
+      "question": "Почему перестал работать Webhook и как вы исправили?",
+      "options": [
+        "GitHub изменил API",
+        "Порт 9000 заблокировал хостинг, перевел на HTTPS через Nginx",
+        "Слетели права доступа",
+        "Закончилось место"
+      ],
+      "correct": "Порт 9000 заблокировал хостинг, перевел на HTTPS через Nginx"
+    },
+    {
+      "topic": "My Cases",
+      "question": "Какой уникальный опыт вы получили на линии 102?",
+      "options": [
+        "Работа с критически важной системой 24/7",
+        "Настройка маршрутизаторов",
+        "Программирование на C++",
+        "Администрирование Windows"
+      ],
+      "correct": "Работа с критически важной системой 24/7"
+    },
+    {
+      "topic": "My Cases",
+      "question": "Какой стек использует Container Packer?",
+      "options": [
+        "Django + MySQL",
+        "Streamlit + Nginx + systemd",
+        "Node.js + MongoDB",
+        "PHP + Apache"
+      ],
+      "correct": "Streamlit + Nginx + systemd"
+    },
+    {
+      "topic": "My Cases",
+      "question": "Как вы настроили мониторинг для Container Packer?",
+      "options": [
+        "Prometheus + Grafana",
+        "Beszel + Telegram-алерты",
+        "Zabbix",
+        "Nagios"
+      ],
+      "correct": "Beszel + Telegram-алерты"
+    },
+    {
+      "topic": "My Cases",
+      "question": "Что вы внедрили в CRM Planfix?",
+      "options": [
+        "Учет ИТ-оборудования и ITSM-процессы",
+        "Чат-бот",
+        "Онлайн-магазин",
+        "Биллинг"
+      ],
+      "correct": "Учет ИТ-оборудования и ITSM-процессы"
+    },
+    {
+      "topic": "My Cases",
+      "question": "Какой CI/CD вы используете в Container Packer?",
+      "options": [
+        "Jenkins",
+        "GitLab CI",
+        "GitHub Actions + Webhook",
+        "TeamCity"
+      ],
+      "correct": "GitHub Actions + Webhook"
+    },
+    {
+      "topic": "My Cases",
+      "question": "Какой VPS провайдер заблокировал порт 9000?",
+      "options": [
+        "hoster.by",
+        "kamatera.com",
+        "fornex.com",
+        "digitalocean.com"
+      ],
+      "correct": "fornex.com"
+    },
+    {
+      "topic": "My Cases",
+      "question": "Какой домен использует Container Packer?",
+      "options": [
+        "autolot25.ddns.net",
+        "packer.cuby.by",
+        "trainer.ddns.net",
+        "aigenerator.myvnc.com"
+      ],
+      "correct": "packer.cuby.by"
+    },
+    {
+      "topic": "My Cases",
+      "question": "Как часто настроен ределивер в GitHub Actions?",
+      "options": [
+        "Каждый час",
+        "Каждые 6 часов",
+        "Раз в день",
+        "Раз в неделю"
+      ],
+      "correct": "Каждые 6 часов"
+    },
+    {
+      "topic": "My Cases",
+      "question": "Какая итоговая надёжность системы Container Packer?",
+      "options": [
+        "90-95%",
+        "95-97%",
+        "97-99%",
+        "99.9%"
+      ],
+      "correct": "97-99%"
+    },
+    {
+      "topic": "My Cases",
+      "question": "Что вы использовали для асинхронного ответа вебхука?",
+      "options": [
+        "celery",
+        "threading",
+        "asyncio",
+        "multiprocessing"
+      ],
+      "correct": "threading"
+    },
+    {
+      "topic": "My Cases",
+      "question": "Какой язык использует Auto Inventory System?",
+      "options": [
+        "Python (Flask)",
+        "Python (Django)",
+        "Node.js",
+        "Go"
+      ],
+      "correct": "Python (Flask)"
+    },
+    {
+      "topic": "My Cases",
+      "question": "Какой домен у AI Post Generator?",
+      "options": [
+        "aigenerator.ddns.net",
+        "aigenerator.myvnc.com",
+        "ai.cuby.by",
+        "generator.ai"
+      ],
+      "correct": "aigenerator.myvnc.com"
+    },
+    {
+      "topic": "My Cases",
+      "question": "Что вы используете для мониторинга серверов?",
+      "options": [
+        "Prometheus",
+        "Zabbix",
+        "Beszel",
+        "Datadog"
+      ],
+      "correct": "Beszel"
+    },
+    {
+      "topic": "My Cases",
+      "question": "Какой домен у DevOps Interview Trainer?",
+      "options": [
+        "trainer.ddns.net",
+        "trainer.myvnc.com",
+        "devops.cuby.by",
+        "interview.ai"
+      ],
+      "correct": "trainer.ddns.net"
+    },
+    {
+      "topic": "My Cases",
+      "question": "Сколько вопросов в DevOps Interview Trainer?",
+      "options": [
+        "50",
+        "100",
+        "150",
+        "278"
+      ],
+      "correct": "278"
+    },
+    {
+      "topic": "My Cases",
+      "question": "Какой стек использует DevOps Interview Trainer?",
+      "options": [
+        "Flask + Nginx",
+        "Django + Apache",
+        "Node.js + Express",
+        "Go + Nginx"
+      ],
+      "correct": "Flask + Nginx"
+    },
+    {
+      "topic": "My Cases",
+      "question": "Что вы использовали для управления версиями Container Packer?",
+      "options": [
+        "Git",
+        "SVN",
+        "Mercurial",
+        "Perforce"
+      ],
+      "correct": "Git"
+    },
+    {
+      "topic": "My Cases",
+      "question": "Какой сервер использует Container Packer?",
+      "options": [
+        "VPS на Fornex",
+        "AWS",
+        "Google Cloud",
+        "Azure"
+      ],
+      "correct": "VPS на Fornex"
+    },
+    {
+      "topic": "My Cases",
+      "question": "Какой сервис используете для Telegram уведомлений?",
+      "options": [
+        "Telegram Bot API",
+        "Webhook",
+        "Long Polling",
+        "Все варианты"
+      ],
+      "correct": "Telegram Bot API"
+    },
+    {
+      "topic": "My Cases",
+      "question": "Что используете для асинхронного вебхука?",
+      "options": [
+        "threading",
+        "asyncio",
+        "celery",
+        "multiprocessing"
+      ],
+      "correct": "threading"
+    },
+    {
+      "topic": "My Cases",
+      "question": "Какая команда перезапускает сервис container-packer?",
+      "options": [
+        "sudo systemctl restart container-packer",
+        "sudo service restart",
+        "sudo restart",
+        "sudo reload"
+      ],
+      "correct": "sudo systemctl restart container-packer"
+    },
+    {
+      "topic": "My Cases",
+      "question": "Что делает скрипт deploy.sh в Container Packer?",
+      "options": [
+        "git pull + systemctl restart",
+        "docker build",
+        "npm install",
+        "python setup.py"
+      ],
+      "correct": "git pull + systemctl restart"
+    },
+    {
+      "topic": "My Cases",
+      "question": "Как часто запускается ределивер в GitHub Actions для Container Packer?",
+      "options": [
+        "Каждый час",
+        "Каждые 6 часов",
+        "Раз в день",
+        "Раз в неделю"
+      ],
+      "correct": "Каждые 6 часов"
+    },
+    {
+      "topic": "My Cases",
+      "question": "На каком языке написан скрипт ределивера в Container Packer?",
+      "options": [
+        "Python",
+        "Bash",
+        "JavaScript (Node.js, Octokit)",
+        "Go"
+      ],
+      "correct": "JavaScript (Node.js, Octokit)"
+    },
+    {
+      "topic": "My Cases",
+      "question": "Какой статус код считается неудачным для вебхука в ределивере?",
+      "options": [
+        "200-299",
+        "300-399",
+        "Меньше 200 или больше 299",
+        "Только 500"
+      ],
+      "correct": "Меньше 200 или больше 299"
+    },
+    {
+      "topic": "My Cases",
+      "question": "Какой флаг в ределивере проверяет, что доставка ещё не переотправлялась?",
+      "options": [
+        "redelivered",
+        "retry",
+        "redelivery",
+        "attempt"
+      ],
+      "correct": "redelivery"
+    },
+    {
+      "topic": "My Cases",
+      "question": "При каком заполнении диска приходит Telegram-уведомление в Container Packer?",
+      "options": [
+        "Более 50%",
+        "Более 75%",
+        "Более 85%",
+        "Более 95%"
+      ],
+      "correct": "Более 85%"
+    },
+    {
+      "topic": "My Cases",
+      "question": "Как называется Telegram-бот для уведомлений в Container Packer?",
+      "options": [
+        "ContainerBot",
+        "PackerBot",
+        "AutoInventoryBot",
+        "DeployBot"
+      ],
+      "correct": "AutoInventoryBot"
+    },
+    {
+      "topic": "My Cases",
+      "question": "Какой порт слушает вебхук в Container Packer?",
+      "options": [
+        "80",
+        "443",
+        "8080",
+        "9000"
+      ],
+      "correct": "9000"
+    },
+    {
+      "topic": "My Cases",
+      "question": "Какой порт слушает Streamlit-приложение в Container Packer?",
+      "options": [
+        "80",
+        "443",
+        "8501",
+        "9000"
+      ],
+      "correct": "8501"
+    },
+    {
+      "topic": "My Cases",
+      "question": "Какой домен у DevOps Interview Trainer?",
+      "options": [
+        "trainer.ddns.net",
+        "trainer.myvnc.com",
+        "devops.cuby.by",
+        "interview.ai"
+      ],
+      "correct": "trainer.ddns.net"
+    },
+    {
+      "topic": "My Cases",
+      "question": "Какой фреймворк используется в DevOps Interview Trainer?",
+      "options": [
+        "Django",
+        "Flask",
+        "FastAPI",
+        "Express"
+      ],
+      "correct": "Flask"
+    },
+    {
+      "topic": "My Cases",
+      "question": "Какой скрипт отвечает за деплой в Container Packer?",
+      "options": [
+        "deploy.sh",
+        "webhook.py",
+        "start.sh",
+        "update.sh"
+      ],
+      "correct": "deploy.sh"
+    },
+    {
+      "topic": "My Cases",
+      "question": "Какая команда перезапускает вебхук при сбое?",
+      "options": [
+        "sudo systemctl restart webhook",
+        "sudo restart webhook",
+        "sudo webhook restart",
+        "sudo service webhook restart"
+      ],
+      "correct": "sudo systemctl restart webhook"
+    },
+    {
+      "topic": "My Cases",
+      "question": "Какой сервис обрабатывает асинхронные запросы от GitHub?",
+      "options": [
+        "Flask",
+        "Streamlit",
+        "Webhook на Python",
+        "Nginx"
+      ],
+      "correct": "Webhook на Python"
+    },
+    {
+      "topic": "My Cases",
+      "question": "Что делает параметр MemoryMax в systemd?",
+      "options": [
+        "Ограничивает память сервиса",
+        "Увеличивает память",
+        "Задаёт swap",
+        "Ничего не делает"
+      ],
+      "correct": "Ограничивает память сервиса"
+    },
+    {
+      "topic": "My Cases",
+      "question": "Какой алгоритм используется для упаковки коробок?",
+      "options": [
+        "3D bin packing",
+        "2D bin packing",
+        "Genetic algorithm",
+        "Greedy algorithm"
+      ],
+      "correct": "3D bin packing"
+    },
+    {
+      "topic": "My Cases",
+      "question": "Какой порт использует Nginx для HTTPS?",
+      "options": [
+        "80",
+        "443",
+        "8080",
+        "8443"
+      ],
+      "correct": "443"
+    }
+  ]
+}

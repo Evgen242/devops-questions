@@ -1,0 +1,225 @@
+{
+  "topic": "Scripting",
+  "questions": [
+    {
+      "topic": "Scripting",
+      "question": "Какая библиотека Python используется для создания веб-приложений в Auto Inventory System?",
+      "options": [
+        "Django",
+        "Flask",
+        "FastAPI",
+        "Tornado"
+      ],
+      "correct": "Flask"
+    },
+    {
+      "topic": "Scripting",
+      "question": "Какой фреймворк Python используется в AI Post Generator для веб-интерфейса?",
+      "options": [
+        "Flask",
+        "Django",
+        "Streamlit",
+        "FastAPI"
+      ],
+      "correct": "Streamlit"
+    },
+    {
+      "topic": "Scripting",
+      "question": "Как в Python создать асинхронный ответ вебхука, чтобы не блокировать GitHub?",
+      "options": [
+        "asyncio",
+        "threading",
+        "multiprocessing",
+        "celery"
+      ],
+      "correct": "threading"
+    },
+    {
+      "topic": "Scripting",
+      "question": "Какая библиотека используется для работы с Telegram Bot API в Container Packer?",
+      "options": [
+        "requests",
+        "python-telegram-bot",
+        "telebot",
+        "Все варианты"
+      ],
+      "correct": "Все варианты"
+    },
+    {
+      "topic": "Scripting",
+      "question": "Как в Python отправить HTTP-запрос к API?",
+      "options": [
+        "requests.get()",
+        "urllib.request",
+        "http.client",
+        "Все варианты"
+      ],
+      "correct": "Все варианты"
+    },
+    {
+      "topic": "Scripting",
+      "question": "Какая библиотека используется в ределивере для работы с GitHub API?",
+      "options": [
+        "axios",
+        "requests",
+        "Octokit",
+        "fetch"
+      ],
+      "correct": "Octokit"
+    },
+    {
+      "topic": "Scripting",
+      "question": "Как в JavaScript (Node.js) установить пакет через npm?",
+      "options": [
+        "npm install <package>",
+        "npm add <package>",
+        "npm get <package>",
+        "npm download <package>"
+      ],
+      "correct": "npm install <package>"
+    },
+    {
+      "topic": "Scripting",
+      "question": "Какой инструмент используется для запуска JavaScript-скрипта в ределивере?",
+      "options": [
+        "node script.js",
+        "npm run script",
+        "js script.js",
+        "javascript script.js"
+      ],
+      "correct": "node script.js"
+    },
+    {
+      "topic": "Scripting",
+      "question": "Какая библиотека Python используется для мониторинга и проверки здоровья вебхука?",
+      "options": [
+        "requests",
+        "urllib",
+        "http.client",
+        "Все варианты"
+      ],
+      "correct": "Все варианты"
+    },
+    {
+      "topic": "Scripting",
+      "question": "Как в Python получить переменные окружения?",
+      "options": [
+        "os.environ.get('KEY')",
+        "os.getenv('KEY')",
+        "Оба варианта",
+        "Ни один"
+      ],
+      "correct": "Оба варианта"
+    },
+    {
+      "topic": "Scripting",
+      "question": "Как в Node.js получить переменные окружения?",
+      "options": [
+        "process.env.KEY",
+        "system.env.KEY",
+        "os.getenv('KEY')",
+        "environment.KEY"
+      ],
+      "correct": "process.env.KEY"
+    },
+    {
+      "topic": "Scripting",
+      "question": "Как в Python отправить сообщение в Telegram через Bot API?",
+      "options": [
+        "requests.post(url, json=data)",
+        "telegram.send()",
+        "bot.send_message()",
+        "api.call()"
+      ],
+      "correct": "requests.post(url, json=data)"
+    },
+    {
+      "topic": "Scripting",
+      "question": "Какая структура данных в Python используется для хранения вопросов в тренажёре?",
+      "options": [
+        "Список словарей (list of dicts)",
+        "Массив",
+        "JSON",
+        "XML"
+      ],
+      "correct": "Список словарей (list of dicts)"
+    },
+    {
+      "topic": "Scripting",
+      "question": "Как в Python запустить shell-команду и получить вывод?",
+      "options": [
+        "subprocess.run()",
+        "os.system()",
+        "os.popen()",
+        "Все варианты"
+      ],
+      "correct": "Все варианты"
+    },
+    {
+      "topic": "Scripting",
+      "question": "Как в Python создать простой HTTP-сервер для вебхука?",
+      "options": [
+        "http.server",
+        "flask",
+        "fastapi",
+        "Все варианты"
+      ],
+      "correct": "Все варианты"
+    },
+    {
+      "topic": "Scripting",
+      "question": "Как в Node.js выполнить HTTP-запрос к API?",
+      "options": [
+        "axios.get()",
+        "fetch()",
+        "http.request()",
+        "Все варианты"
+      ],
+      "correct": "Все варианты"
+    },
+    {
+      "topic": "Scripting",
+      "question": "Какой менеджер пакетов используется в проекте ределивера?",
+      "options": [
+        "npm",
+        "yarn",
+        "pnpm",
+        "Все варианты"
+      ],
+      "correct": "npm"
+    },
+    {
+      "topic": "Scripting",
+      "question": "Как в Python обработать ошибку при HTTP-запросе?",
+      "options": [
+        "try/except",
+        "if response.status_code != 200",
+        "Оба варианта",
+        "Ни один"
+      ],
+      "correct": "Оба варианта"
+    },
+    {
+      "topic": "Scripting",
+      "question": "Как в JavaScript распарсить JSON-ответ от API?",
+      "options": [
+        "JSON.parse()",
+        "response.json()",
+        "Оба варианта",
+        "Ни один"
+      ],
+      "correct": "Оба варианта"
+    },
+    {
+      "topic": "Scripting",
+      "question": "Какой фреймворк Python используется в DevOps Interview Trainer?",
+      "options": [
+        "Django",
+        "Flask",
+        "FastAPI",
+        "Streamlit"
+      ],
+      "correct": "Flask"
+    }
+  ]
+}
