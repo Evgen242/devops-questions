@@ -28,8 +28,8 @@ def generate_app():
             questions_str += "\n"
     questions_str += "]\n"
     
-    # Читаем шаблон app.py из рабочей папки
-    with open('../devops-test-app/app.py', 'r') as f:
+    # Читаем шаблон app.py из текущей папки
+    with open('app_template.py', 'r') as f:
         app_content = f.read()
     
     # Заменяем блок questions
